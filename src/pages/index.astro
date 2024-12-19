@@ -1,0 +1,65 @@
+---
+/*========================================*/
+/*	PAGE: Home/Index
+		NOTES:	
+*/
+/*========================================*/
+
+//Essential Components
+	import Layout from '@layouts/Layout.astro';
+
+//Content Components
+	//import MasterComponent from '@components/MasterComponent.astro';
+	import LinkCard from '@components/contentComponents/LinkCard.astro';
+	// SplitLayout from '@components/contentLayouts/SplitLayout.astro';
+	import FooterNotice from '@components/contentComponents/FooterNotice.astro';
+	import SiteQRCodeLink from '@components/contentComponents/SiteQRCodeLink.astro';
+	//import DisplayBits from '@components/DisplayBits.astro';
+
+//Site Data
+	const siteData = await import("src/data/siteData.json");
+---
+
+<Layout 
+	title={siteData.projectName}
+	heading={siteData.projectName}
+>
+	
+	<section>
+		<h2 class="text-size-3">Links</h2>
+		<div class="card-grid">
+			<LinkCard
+				name="LinkCard Component"
+				description="A simple LinkCard component for displaying links in a grid."
+				link="/link-card"
+			/>	
+			
+			<LinkCard
+				name="JSON Page Content"
+				description="Example of a page that uses JSON content to populate the page."
+				link="/json-content"
+			/>	
+
+			<LinkCard
+				name="Placeholder Card"
+				description="Placeholder Card"
+				link="/#"
+			/>	
+		</div>
+		
+	</section>
+
+	<SiteQRCodeLink/>
+	<FooterNotice/>
+
+</Layout>
+
+
+<style>
+	.card-grid{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+</style>

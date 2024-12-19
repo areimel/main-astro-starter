@@ -1,0 +1,39 @@
+{
+    "BecomeAPetInc": {
+        "formattedName": "Become a Pet Inc.",
+        "status-1": "Active",
+        "status-2": "Closed",
+        "dangerStatus": false,
+        "description": "[C-08716:] Become A Pet Inc. is the spiritual successor of the 'Drones of Seph' server, an 18+ furry drone roleplay server. The original server is still accessible but vacant, a join link for Become A Pet, Inc. is available there. It appears to be a private community. This drone did not probe further. More information requested.",
+        "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "metadata": {
+            "leadership": "Seph, Master",
+            "website": "n/a",
+            "socialMedia": "n/a",
+            "guide": "n/a",
+            "files": "n/a",
+            "discord": "n/a",
+            "requirements": "n/a",
+            "communityConcerns": "n/a"
+        }
+    },
+    "HiveName": {
+        "formattedName": "Hive Name",
+        "status-1": "Active", 
+        "status-2": "Closed",
+        "dangerStatus": false,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "metadata": {
+            "leadership": "Leader Name, Title",
+            "website": "n/a",
+            "socialMedia": "n/a", 
+            "guide": "n/a",
+            "files": "n/a",
+            "discord": "n/a",
+            "requirements": "n/a",
+            "communityConcerns": "n/a"
+        }
+    }
+    
+}  

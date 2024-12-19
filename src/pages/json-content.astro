@@ -1,0 +1,53 @@
+---
+/*========================================*/
+/*	PAGE: Home/Index
+		NOTES:	
+*/
+/*========================================*/
+
+//Essential Components
+	import Layout from '@layouts/Layout.astro';
+
+//Content Components
+	//import MasterComponent from '@components/MasterComponent.astro';
+	import LinkCard from '@components/contentComponents/LinkCard.astro';
+	// SplitLayout from '@components/contentLayouts/SplitLayout.astro';
+	import FooterNotice from '@components/contentComponents/FooterNotice.astro';
+	import SiteQRCodeLink from '@components/contentComponents/SiteQRCodeLink.astro';
+	//import DisplayBits from '@components/DisplayBits.astro';
+
+//Site Data
+	const siteData = await import("src/data/siteData.json");
+	const pageData = await import("src/data/page-content-template.json");
+---
+
+<Layout 
+	title={pageData.title}
+	heading={pageData.title}
+>
+	
+	<article class="page-content">
+		<h2>{pageData.subtitle}</h2>
+		<p>
+			{pageData.description}
+		</p>
+	</article>
+
+	<SiteQRCodeLink/>
+	<FooterNotice/>
+
+</Layout>
+
+
+<style lang="scss">
+	.card-grid{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+	.page-content{
+		//max-width: 800px;
+		padding: 1rem;
+	}
+</style>
