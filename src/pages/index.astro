@@ -26,25 +26,69 @@
 >
 	
 	<section>
-		<h2 class="text-size-3">Links</h2>
+		<h2 class="text-size-3">Page Templates</h2>
 		<div class="card-grid">
-			<LinkCard
-				name="LinkCard Component"
-				description="A simple LinkCard component for displaying links in a grid."
-				link="/link-card"
-			/>	
 			
 			<LinkCard
 				name="JSON Page Content"
 				description="Example of a page that uses JSON content to populate the page."
 				link="/json-content"
 			/>	
+			
+			<LinkCard
+				name="About Page"
+				description="A simple page that uses the About Page template."
+				link="/about"
+			/>	
 
 			<LinkCard
-				name="Placeholder Card"
-				description="Placeholder Card"
-				link="/#"
+				name="Contact Page"
+				description="A simple page that uses the Contact Page template."
+				link="/contact"
 			/>	
+
+			<LinkCard
+				name="Custom 404/Error Page"
+				description="A simple page that uses the 404 Page template."
+				link="/404"
+			/>	
+
+			<LinkCard
+				name="Conversion Page"
+				description="A simple page that uses the Conversion Page template."
+				link="/conversion"
+			/>	
+			
+			<!-- Simple FOR loop -->
+			{[...Array(4)].map(() => (
+				<LinkCard
+					name="Placeholder Card"
+					description="Placeholder Card"
+					link="/#"
+				/>	
+			))}
+
+			
+		</div>
+		
+	</section>
+
+	<section>
+		<h2 class="text-size-3">Web Tools</h2>
+		<div class="card-grid">
+			
+			<LinkCard
+				name="QR Code Generator"
+				description="Generate a QR Code for a link."
+				link="/qr-code-generator"
+			/>	
+			
+			<LinkCard
+				name="QRCode Scanner"
+				description="Scan a QR Code."
+				link="/web-tools/qr-scanner"
+			/>	
+	
 		</div>
 		
 	</section>

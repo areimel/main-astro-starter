@@ -1,9 +1,9 @@
 ---
 
-const {} = Astro.props;
+const {reverse, mobileReverse} = Astro.props;
 ---
 
-<div class="SplitLayout">
+<div class="SplitLayout {reverse ? 'reversed' : ''} {mobileReverse ? 'mobileReverse' : ''}">
 
 	<div class="leftSlot inverted">
 		<div class="inner">
@@ -33,6 +33,7 @@ const {} = Astro.props;
 		display: flex;
 		border-top: var(--border-settings-main);
 		border-bottom: var(--border-settings-main);
+		
 		.leftSlot, .rightSlot{
 			width: 50%;
 			display: flex;
@@ -48,6 +49,7 @@ const {} = Astro.props;
 				padding: var(--padding-1);
 			}
 		}
+		
 		.inverted{
 			background: var(--black);
 			color: var(--white);
@@ -58,6 +60,9 @@ const {} = Astro.props;
 			flex-direction: column;
 			.leftSlot, .rightSlot{
 				width: 100%;
+			}
+			&.mobileReverse{
+				flex-direction: column-reverse;
 			}
 		}
 	}

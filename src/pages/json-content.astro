@@ -26,28 +26,28 @@
 	heading={pageData.title}
 >
 	
-	<article class="page-content">
+	<article id="article-content">
 		<h2>{pageData.subtitle}</h2>
-		<p>
-			{pageData.description}
-		</p>
+		<p>Page Type: {pageData.pageType}</p>
+		<hr/>
+		<h2>Simple HTML Page Content:</h2>
+		<p set:html={pageData.description}></p>
 	</article>
-
-	<SiteQRCodeLink/>
-	<FooterNotice/>
 
 </Layout>
 
 
-<style lang="scss">
-	.card-grid{
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 1rem;
-	}
-	.page-content{
+<style lang="scss" is:global>
+	#article-content{
 		//max-width: 800px;
 		padding: 1rem;
+
+		img{
+			display: block;
+			margin: 1rem auto;
+			width: auto;
+			max-width: 100%;
+			height: auto;
+		}
 	}
 </style>
