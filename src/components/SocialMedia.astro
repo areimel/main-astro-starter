@@ -1,0 +1,25 @@
+---
+
+import { Icon } from 'astro-icon/components';
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="SocialMedia">
+	<Icon name="mdi:discord" />
+	<Icon name="mdi:twitter" />
+	<Icon name="mdi:instagram" />
+	<Icon name="mdi:linkedin" />
+	<Icon name="mdi:youtube" />
+</div>
+
+<style lang="scss">
+	.SocialMedia{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+</style>
+

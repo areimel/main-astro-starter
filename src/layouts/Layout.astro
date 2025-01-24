@@ -4,6 +4,7 @@
 
 //Components
 	import HeadGlobal from "@components/HeadGlobal.astro";
+	import SocialMedia from "@components/SocialMedia.astro";
 
 //Props
 	const { title, description, heading } = Astro.props;
@@ -59,13 +60,7 @@
 			</div>
 			
 			<div class="right">
-				<div>
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="/about">About</a></li>
-						<li><a href="/contact">Contact</a></li>
-					</ul>
-				</div>
+				<SocialMedia />
 			</div>
 
 		</footer>
