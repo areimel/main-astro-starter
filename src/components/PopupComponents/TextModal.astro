@@ -1,0 +1,61 @@
+---
+import CloseButton from '@components/ButtonComponents/CloseButton.astro';
+import ModalWrapper from '@components/PopupComponents/ModalWrapper.astro';
+import LinkButton from '@components/ButtonComponents/LinkButton.astro';
+
+const { modalID, heading } = Astro.props;
+---
+<ModalWrapper modalID={modalID}>
+	<div class="TextModal">
+		<div class="modalClose" data-modal-close>
+			<CloseButton/>
+		</div>
+		
+		<div class="modalContent">
+			<div class="heading">
+				<h2>{heading}</h2>
+			</div>
+			<div class="body">
+				<slot>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					</p>
+					<LinkButton link="/" text="Link Button" style="primary"/>
+				</slot>
+			</div>
+		</div>
+
+	</div>
+
+</ModalWrapper>
+
+
+<style lang="scss">
+	.TextModal{
+		border: var(--border-settings-main);
+		box-shadow: var(--shadow-1);
+		background-color: var(--background-color);
+		padding: var(--padding-1);
+		width: 100%;
+		max-width: 800px;
+		height: 100%;
+		max-height: 500px;
+	}
+
+	.modalClose{
+		position: absolute;
+		top: -1rem;
+		right: -1rem;
+	}
+</style>
+
+<!-- <style is:global>
+	.modal{
+		opacity: 0;
+		pointer-events: none;
+	}
+	.modal[data-status="open"]{
+		opacity: 1;
+		pointer-events: auto;
+	}
+</style> -->

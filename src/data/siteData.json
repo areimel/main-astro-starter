@@ -1,14 +1,14 @@
 {
     "siteURL": "https://interzone-ar.netlify.app",
     "projectName": "Main Astro Starter",
-    "titleSuffix": "| Interzone Technology Group",
-    "companyName": "Interzone Technology Group",
+    "titleSuffix": "| Interzone Technology",
+    "companyName": "Interzone Technology",
     "companyLogo": "/images/logo/interzone-logo-black.svg",
     "companyLogoGlyph": "/images/logo/interzone-logo-black.svg",
     "favicon": "/images/logo/interzone-logo-black.svg",
     "fallbackDescription": "Augmented Reality Experiences",
     "siteMetadata": {
-        "author": "Interzone Technology Group",
+        "author": "Interzone Technology",
         "themeColor": "light"
     },
     "features": {

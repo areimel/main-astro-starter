@@ -5,6 +5,9 @@
 //Components
 	import HeadGlobal from "@components/HeadGlobal.astro";
 	import SocialMedia from "@components/SocialMedia.astro";
+	import BrowserDetect from "@components/ScriptComponents/BrowserDetect.astro";
+	import TextModal from "@components/PopupComponents/TextModal.astro";
+	import VideoModal from "@components/PopupComponents/VideoModal.astro";
 
 //Props
 	const { title, description, heading } = Astro.props;
@@ -23,7 +26,8 @@
 <html lang="en" data-theme="light">
 	<head>
 		<HeadGlobal title={title} description={description}/>
-
+		<BrowserDetect />
+		<script is:inline src="/scripts/modals.js"></script>
 	</head>
 	<body>
 		
@@ -65,7 +69,21 @@
 
 		</footer>
 
-		
+		<!-- Popups, Modals, Dialogs, etc. -->
+		<TextModal 
+			modalID="textModal"
+			heading="Text Modal | Initial Testing" 
+		>
+			<p>
+				Place this component in the Layout file to make it globally available on all pages - or place it in just the page file where you'll need it.
+			</p>
+		</TextModal>
+
+		<TextModal 
+			modalID="textModal2"
+			heading="Hello World" 
+		></TextModal>
+
 		
 
 		

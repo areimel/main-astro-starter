@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { link, newTab, text, modalOpen, modalClose, style } = Astro.props;
+---
+<a 
+	class={`LinkButton ${style}`}
+	href={link} 
+	target={newTab ? "_blank" : "_self"} 
+	data-modal-open={modalOpen}
+>
+	{text}
+</a>
+
+<style>
+	.LinkButton{
+		cursor: pointer;
+		background-color: var(--accent-color);
+		border: var(--border-settings-main);
+		color: var(--accent-color-light);
+		text-align: center;
+		padding: 0.5rem 1rem;
+		text-decoration: none;
+
+		&:hover{
+			/* background-color: var(--accent-color-light);
+			color: var(--accent-color); */
+			text-decoration: underline;
+		}
+    }
+</style>

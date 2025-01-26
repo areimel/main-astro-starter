@@ -1,6 +1,6 @@
 ---
 
-const {name, description, link} = Astro.props;
+const {name, description, link, modalOpen} = Astro.props;
 ---
 
 <div class="Card">
@@ -9,7 +9,7 @@ const {name, description, link} = Astro.props;
 		{description}
 	</p>
 	<div class="linkSection">
-		<a href={link}>LEARN MORE</a>
+		<a href={link} data-modal-open={modalOpen}>LEARN MORE</a>
 	</div>
 </div>
 

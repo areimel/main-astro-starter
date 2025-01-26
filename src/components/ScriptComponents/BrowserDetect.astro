@@ -1,0 +1,80 @@
+---
+//NOTE: this script only does BASIC browser & OS detection. 
+//		It's lightweight and convenient for simple usage, but it doesn't use advanced feature detection that would be more accurate.
+//		Consider using a more advanced library for more accurate detection.
+//const { title, subtitle } = Astro.props;
+---
+
+<script>
+	function detectBrowser() {
+		const userAgent = navigator.userAgent.toLowerCase();
+		
+		if (userAgent.match(/chrome|chromium|crios/i)) {
+			return 'chrome';
+		} else if (userAgent.match(/firefox|fxios/i)) {
+			return 'firefox';
+		} else if (userAgent.match(/safari/i) && !userAgent.match(/chrome|chromium|crios/i)) {
+			return 'safari';
+		} else if (userAgent.match(/opr\//i)) {
+			return 'opera';
+		} else if (userAgent.match(/edg/i)) {
+			return 'edge';
+		} else if (userAgent.match(/trident|msie/i)) {
+			return 'ie';
+		}
+		
+		return 'unknown';
+	}
+
+	// Example usage
+	const browser = detectBrowser();
+	console.log(`Browser: [${browser}]`);
+	// Add browser name as class to body element
+	document.body.classList.add(`browser-detect-${browser}`);
+	
+	// Check if it's iOS Safari specifically
+	const isIosSafari = () => {
+		const ua = window.navigator.userAgent;
+		const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+		const webkit = !!ua.match(/WebKit/i);
+		return iOS && webkit && !ua.match(/CriOS/i);
+	}
+
+	if (isIosSafari()) {
+		console.log("This is iOS Safari");
+		document.body.classList.add('browser-detect-ios-safari');
+	}
+</script>
+
+<script>
+	function detectOS() {
+		const userAgent = navigator.userAgent.toLowerCase();
+		
+		if (userAgent.match(/iphone|ipad|ipod/i)) {
+			return 'ios';
+		} else if (userAgent.match(/android/i)) {
+			return 'android';
+		} else if (userAgent.match(/mac/i) && !userAgent.match(/iphone|ipad|ipod/i)) {
+			return 'macos';
+		} else if (userAgent.match(/win/i)) {
+			return 'windows';
+		} else if (userAgent.match(/linux/i)) {
+			return 'linux';
+		}
+		
+		return 'unknown';
+	}
+
+	// Detect OS and add class to body
+	const os = detectOS();
+	console.log(`Operating System: [${os}]`);
+	document.body.classList.add(`os-detect-${os}`);
+
+	// Additional check for mobile devices
+	const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	if (isMobile) {
+		document.body.classList.add('os-detect-mobile');
+	}
+</script>
+
+
