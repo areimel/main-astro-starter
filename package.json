@@ -3,7 +3,8 @@
   "type": "project-template",
   "version": "0.1.0",
   "scripts": {
-    "dev": "astro dev --open",
+    "dev": "astro dev",
+    "dev-open": "astro dev --open",
     "start": "astro dev --host 0.0.0.4321",
     "build": "astro check && astro build NODE_OPTIONS=--max_old_space_size=8192",
     "preview": "astro preview",
