@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.4",
+    "@iconify-json/uil": "^1.2.3",
     "astro": "^4.4.0",
     "astro-icon": "^1.1.5",
     "qr-scanner": "^1.4.2",
